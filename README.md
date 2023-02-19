@@ -13,6 +13,10 @@ On a sunny day, the pet *should* be able to:
 - [x] Poop without prompting
 - [x] Age from birth to death
 - [x] Get sick from neglect
+- [x] Be cured
+- [x] Get cleaned
+- [x] Possibly find some treasure
+
 
 Early on in the process I had decided to make the animations a part of it, because of the original game's visual component. With each tweak, even in the final stages, came the inevitable bugs. If you find one, or have suggestions, let me know~ I want to get better!
 
