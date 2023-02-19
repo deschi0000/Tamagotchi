@@ -2,7 +2,7 @@ from classes import Tamagotchi
 from random import choice, randrange
 from tamagotchi_animation import *
 
-import os      # Clear the cmd line
+import os     
 import time
 
 MAX_AGE = 10
@@ -21,8 +21,6 @@ OBJECTS_TO_FIND = [
     ]
 
 
-
-
 def create_tamagotchi():
     '''
     This will create a tamagotchi object
@@ -33,8 +31,7 @@ def create_tamagotchi():
     while len(name) == 0:
         name = input("")
         if len(name.strip()) == 0:
-            print("Please enter a valid name: ", end="")          
-
+            print("Please enter a valid name: ", end="")       
     return Tamagotchi(name)
     
 def time_of_day_message(num):
@@ -116,7 +113,7 @@ def happiness_check(object):
         object.is_sick = True
         sick_animation()
         press_enter()
-    elif object.neglectometer > 7 and object.is_playing == False:        #not is playing prevents from showing if the user just played with it
+    elif object.neglectometer > 7 and object.is_playing == False:        
         sad_animation()
         print(f"{object.name} is feeling a little neglected...")
         press_enter()
@@ -126,6 +123,7 @@ def happiness_check(object):
 def reset(object):
     # Function that will reset stats that change naturally after one turn
     object.playing = False
+
 
 def death_type_check(object):
     death_animation()
@@ -138,15 +136,15 @@ def death_type_check(object):
 def final_stats(object):
     print(f"GG. Some info on {object.name}'s final stats")
     print("==================================")
-    # print(object)
-    # print("==================================")
     print(f"{object.name} lived to {object.age} years old")
+
     if object.age < MAX_AGE:
         print("Make sure to take better care of your pet next time!")
     if object.number_of_times_happy > 5:
         print(f"{object.name} was quite happy during his life. Great Job!")
     if object.number_of_times_sick > 2:
         print("Remember to clean your pet so it doesn't get sick as often!")
+
     print("Thank you for playing!")
     print("==================================\n")
     quit()
@@ -157,8 +155,6 @@ def holding_check(object):
         object.is_holding == 0
     elif object.soiled == False and object.is_holding > 5 and object.is_resting is False:
         object.unchi(True)
-        # print(f"{object.name} relieved itself!")
-        # press_enter()
     else:
         object.is_holding += 1
 
@@ -177,10 +173,8 @@ def warning(type, object):
 
 def command_menu(object):
     c = "999"
-    # print("\nEnter your command:")
     if object.is_resting is False and object.energy == 100:                         # Awake, fully rested, healthy
         while c.lower() not in AWAKE_COMMANDS_RESTED:
-            # os.system("cls")                       # Put these in each if you don't want repeats (but it gets rid of the stats!)
             c = input("Feed [f]  | Play [p] | Poo(u) | Do Nothing [n]\n")        
     elif object.is_resting is False and object.is_sick is True:                     # Awake, sick
         while c.lower() not in AWAKE_COMMANDS_SICK:
@@ -224,7 +218,7 @@ def command_execute(input, object):
     if input == "m":
         object.cure()
 
-    if input == "n":              # Do Nothing
+    if input == "n":                           # Do Nothing
         rest_check(object, object.energy)
         if object.is_resting is False:
             object.neglect()
@@ -234,8 +228,6 @@ def clean_check(object):
     if object.soiled == True and object.unclean > 3:
         object.is_sick = True
         object.number_of_times_sick += 1
-        # sick_animation()                            #added    not needed b/c sick check?
-        # print(f"{object.name} is sick!")            #added
         if object.is_resting is False:
             unclean_animation() 
         print(f"{object.name} needs to be cleaned!")
@@ -273,6 +265,7 @@ def sleep_roll(object):
         object.rest(True)
 
 def treasure_hunt_roll(object):
+    # Finding treasure
     if randrange(100) == 42 and object.is_resting is not True:
         if object.happiness + 35 < 100:
             object.happiness += 35

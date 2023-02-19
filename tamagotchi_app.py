@@ -17,12 +17,11 @@ while t1.is_alive:
         print("==================================")
 
         print(t1)
-        # print("COMMANDS:")
         print("What would you like to do?")
         reset(t1)
                        
         command = command_menu(t1)
-        os.system("cls")                # Do we like clearing the menu? less confusing?
+        os.system("cls")                
 
         command_execute(command, t1)
 
@@ -43,8 +42,6 @@ while t1.is_alive:
 
     #  END OF DAY -> get full rest + Increment Age    
     end_of_day(t1)
-
-    #press_enter()       #--> Using sleep command instead of enter...
 
 death_type_check(t1)
 final_stats(t1)

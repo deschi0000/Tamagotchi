@@ -2,6 +2,8 @@ import time
 import os
 from frame_functions import *
 
+# The frame animations using the frames from the frame_functions
+
 def death_animation():
     for i in range(0, 2):
         os.system("cls")
@@ -166,19 +168,3 @@ def treasure_found_animation():
         time.sleep(0.5)
         os.system("cls")
         teasure_find_1()
-
-# Debug away
-# treasure_found_animation()
-# birth_animation()
-# cured_animation()
-# play_animation()
-# eat_animation()
-# death_animation()
-# sleep_animation()
-# unchi_animation()
-# happy_animation()
-# sick_animation()
-# sick_animation2()
-# wake_up_animation()
-# unclean_animation()
-# clean_animation()

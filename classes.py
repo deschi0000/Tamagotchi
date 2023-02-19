@@ -1,4 +1,3 @@
-import time
 from random import choice
 from tamagotchi_animation import *
 
