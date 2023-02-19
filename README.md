@@ -14,6 +14,8 @@ On a sunny day, the pet *should* be able to:
 - [x] Age from birth to death
 - [x] Get sick from neglect
 
+Early on in the process I had decided to make the animations a part of it, because of the original games visual aspect. 
+
 With each tweak, even in the final stages, came the inevitable bugs. If you find one, or have suggestions, let me know! I want to get better!
 
 I had a blast doing this project as it's one of the biggest I've undertaken so far.
@@ -31,6 +33,10 @@ The tamagotchi_app.exe file in the dist folder should do the trick. If not, feel
 
 
 ## FAQ
+
+#### Why isn't it like a real tamagotchi?
+
+Because I decided to go into this project as cold as possible, restricting myself to the limits of the challenge and the peripheral knowledge I had of the game (which I never had). Any questions that I did have, I asked my wife, who told me what worked and what clearly wasn't a thing in the original game. I took this approach to limit copy-pasting as much as possible and try to work things out as well. 
 
 #### Is it turn-based?
 
