@@ -1,8 +1,6 @@
 import time
 import os
 
-# The individual 'frames' used in the frame_functions
-
 def ghost_1():
     print("    /}/}     ")  
     print("   ( >.<)    ")   
