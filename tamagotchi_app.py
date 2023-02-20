@@ -4,8 +4,8 @@ from tamagotchi_functions import *
 
 
 def main_app():
-    t1 = Tamagotchi("DK")           #Debugging Instance
-    # t1 = intro()
+    # t1 = Tamagotchi("DK")           #Debugging Instance
+    t1 = intro()
     while t1.is_alive:
 
         for i in range(0,3):    # Morning, Day and Night
