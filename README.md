@@ -48,4 +48,12 @@ Python
 
  - [All about Tamagotchi](https://tamagotchi.fandom.com/wiki/Main_Page)
 
+## Screenshots
+
+![image info](https://i.imgur.com/D7WMqZD.png)
+
+![image info](https://i.imgur.com/FOqEtfu.png)
+
+![image info](https://i.imgur.com/9ViVaCr.png)
+
 
